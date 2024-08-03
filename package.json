@@ -1,0 +1,19 @@
+{
+  "name": "aqa-advanced",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+     },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tetyana76/AQA-advanced.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.3.0"
+  }
+}
