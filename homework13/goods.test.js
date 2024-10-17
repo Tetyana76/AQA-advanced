@@ -3,7 +3,7 @@ const axios = require("axios");
 describe('API Tests', () => {
     let createdObjectId;
 
-    test('Post create New Object', async () => {
+    test('Post - Create New Object', async () => {
         const response = await axios.post('https://api.restful-api.dev/objects',
             {
                 "name": "Apple MacBook Pro 18",
@@ -21,7 +21,7 @@ describe('API Tests', () => {
         createdObjectId = response.data.id;
     });
 
-    test('GET Single object', async () => {
+    test('GET - Single object', async () => {
         const response = await axios.get(`https://api.restful-api.dev/objects/${createdObjectId}`, { validateStatus: () => true });
         expect(response.status).toBe(200);
         expect(typeof response.data.name).toBe('string');
@@ -30,7 +30,7 @@ describe('API Tests', () => {
         expect(response.data.data['Hard disk size']).toBeDefined();
     });
 
-    test('Patch change partially object', async () => {
+    test('Patch -Change partially object', async () => {
         const response = await axios.patch(`https://api.restful-api.dev/objects/${createdObjectId}`,
             {
                 "name": "Apple MacBook Air",
